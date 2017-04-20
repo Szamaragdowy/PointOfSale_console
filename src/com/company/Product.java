@@ -1,6 +1,6 @@
 package com.company;
 
-public class Product {
+class Product {
     private String name;
     private double price;
     private int bar_code;
@@ -11,23 +11,23 @@ public class Product {
         this.bar_code = bar_code;
     }
 
-    public double getPrice() {
+    double getPrice() {
         return price;
     }
 
-    public String getName() {
+    String getName() {
         return name;
     }
 
-    public int getBar_code() {
+    int getBar_code() {
         return bar_code;
     }
 
-    public String print() {
+    String print() {
         java.text.DecimalFormat df = new java.text.DecimalFormat();
         df.setMinimumFractionDigits(2);
 
-        StringBuffer sb = new StringBuffer("                                           ");
+        StringBuilder sb = new StringBuilder("                                           ");
         sb.replace(0, name.length(), name);
         sb.replace(15, (15 + df.format(price).length()), df.format(price));
 
